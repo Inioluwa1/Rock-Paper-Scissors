@@ -14,7 +14,7 @@ export default function Modal2({isOpen, setisOpen}) {
         <IoMdClose size={50} onClick={closeModal} className='closeButton'/> 
       </div>
       <div className='imageContainer'>
-        <img src='/public/images/image-rules.svg' alt='rules of the game' className='image' />
+        <img src='images/image-rules.svg' alt='rules of the game' className='image' />
       </div>
     </div>
   )
