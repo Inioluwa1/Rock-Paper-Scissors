@@ -99,6 +99,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  /* border: 3px solid; */
 }
 .housePicked h1{
   margin-bottom: 4rem;
@@ -107,10 +108,66 @@
   letter-spacing: 2px;
 }
 
-.circle{
+.GMcircle{
   border-radius: 50%;
   background-color: rgb(51, 47, 65);
-  padding: 6rem;
+  padding: 7.5rem;
   position: relative;
-  top: 2rem
+  top: 1rem
+}
+
+@media screen and (max-width: 470px) {
+  .GameModeContainer{
+    width: 90%;
+    margin-top: 20%;
+  }
+  .Choosengame{
+    flex-direction: column-reverse;
+    width: 50%;
+  }
+  .Choosengame h1{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  .GMpapercharacter{
+    padding: 1rem;
+  }
+  .GMpaper{
+    padding: 2rem;
+  }
+  .GMrockcharacter{
+    padding: 1rem;
+  }
+  .GMrock{
+    padding: 2rem;
+  }
+  .GMscissorscharacter{
+    padding: 1rem;
+  }
+  .GMscissors{
+    padding: 2rem;
+  }
+  .GMcircle{
+    padding: 4rem;
+    top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .gameplayed{
+    position: absolute;
+    width: 60%;
+    top: 65%;
+    left: 20%
+  }
+  .gameplayed h1{
+    font-size: 3rem;
+  }
+  .housePicked{
+    flex-direction: column-reverse;
+    width: 50%;
+  }
+  .housePicked h1{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+  
 }

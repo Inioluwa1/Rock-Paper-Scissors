@@ -10,7 +10,7 @@ export default function Header({score}) {
     <div className='HeaderContainer'>
         
       <div>
-        <img src='images/logo.svg' alt='Rock Paper Scissors'/>
+        <img src='images/logo.svg' alt='Rock Paper Scissors' className='logoImage'/>
       </div>
 
       <div className="scoreContainer"> 

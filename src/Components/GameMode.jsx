@@ -69,7 +69,10 @@ export default function GameMode({setScore, score}) {
   
       <div className='housePicked'>
         <h1> The house picked </h1>
-        {!housePicknum && <h1 className='circle'> </h1>}
+        {!housePicknum && 
+          <div className='GMcircle'>
+          </div>
+        }
 
         {housePicknum === 1 ?
         <div className='GMpapercharacter'>

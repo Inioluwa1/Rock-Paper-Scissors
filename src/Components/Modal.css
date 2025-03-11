@@ -1,10 +1,11 @@
 .ModalContainer{
     position: absolute;
-    left: 40%;
+    left: 35%;
     top: 20%;
     display: flex;
     flex-direction: column;
-    width: 25%;
+    align-items: center;
+    width: 30%;
     /* height: 50vh; */
     margin: auto;
     /* border: 3px solid; */
@@ -17,6 +18,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5%;
+    width: 95%;
+    /* border: 3px solid; */
 }
 .ModalHeader h1{
     text-transform: uppercase;
@@ -29,10 +32,23 @@
 }
 .imageContainer{
     align-self: center;
-    width: 100%;
+    width: 95%;
+    /* border: 3px solid; */
 }
 .image{
     height: 100%;
     width: 80%;
     margin: 0 10%;
+}
+
+@media screen and (max-width: 470px) {
+    .ModalContainer{
+        width: 70%;
+        left: 15%;
+        height: 40vh;
+    }
+    .image{
+        width: 100%;
+        margin: 0;
+    }
 }

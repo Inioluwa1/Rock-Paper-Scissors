@@ -9,6 +9,9 @@
     padding: 1.5rem;
     border-radius: 10px;
 }
+.logoImage{
+    width: 100%
+}
 .scoreContainer{
     background-color: white;
     border-radius: 10px;
@@ -28,4 +31,19 @@
     color: rgb(59, 67, 99);
     font-size: 4rem;
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 470px) {
+    .HeaderContainer{
+        width: 90%
+    }
+    .logoImage{
+        width: 80%
+    }
+    .scoreContainer{
+        padding: .5rem 1.5rem;
+    }
+    .scoreValue{
+        font-size: 3rem;
+    }
 }
