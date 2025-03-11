@@ -1,0 +1,31 @@
+.HeaderContainer{
+    width: 50%;
+    border: 3px solid rgb(96, 110, 133);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+.scoreContainer{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 3rem;
+}
+.scoreTitle{
+    color: rgb(42, 70, 192);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.scoreValue{
+    color: rgb(59, 67, 99);
+    font-size: 4rem;
+    margin-bottom: 0;
+}

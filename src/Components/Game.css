@@ -1,0 +1,62 @@
+.gameContainer{
+    width: 40%;
+    /* border: 3px solid; */
+    margin: auto;
+    margin-top: 2%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* justify-content: center; */
+}
+
+.triangle{
+	position: absolute;
+	top: 60px;
+}
+
+.papercharacter{
+  /* border: 3px solid; */
+	background-image: radial-gradient( rgb(72, 101, 244), rgb(86, 113, 245));
+	border-radius: 50%;
+	position: absolute;
+	left: 9rem ;
+	padding: 1.5rem;
+	cursor: pointer;
+}
+.paper{
+	background-color: white;
+	/* border: 3px solid; */
+	border-radius: 50%;
+	padding: 2.5rem
+}
+
+.scissorscharacter{
+  /* border: 3px solid; */
+	background-image: radial-gradient(rgb(236, 158, 14), rgb(236, 169, 34));
+	border-radius: 50%;
+	position: absolute;
+	right: 9rem;
+	padding: 1.5rem;
+	cursor: pointer;
+}
+.scissors{
+	background-color: white;
+	border-radius: 50%;
+	padding: 2.5rem;
+}
+
+.rockcharacter{
+  /* border: 3px solid; */
+	background-image: radial-gradient(rgb(220, 46, 78), rgb(221, 64, 93));
+	border-radius: 50%;
+	position: absolute;
+	top: 14rem;
+	padding: 1.5rem;
+	cursor: pointer;
+}
+.rock{
+	background-color: white;
+	border-radius: 50%;
+	padding: 2.5rem;
+}

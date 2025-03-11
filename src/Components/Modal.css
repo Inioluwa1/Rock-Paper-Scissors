@@ -1,0 +1,38 @@
+.ModalContainer{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    /* height: 50vh; */
+    margin: auto;
+    /* border: 3px solid; */
+    background-color: rgb(247, 235, 235);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+.ModalHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.ModalHeader h1{
+    text-transform: uppercase;
+    color: hsl(229, 25%, 31%);
+    letter-spacing: 1px;
+}
+.closeButton{
+    cursor: pointer;
+    color: grey;
+}
+.imageContainer{
+    align-self: center;
+    width: 100%;
+}
+.image{
+    height: 100%;
+    width: 80%;
+    margin: 0 10%;
+}
