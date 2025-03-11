@@ -3,14 +3,14 @@ import { useState } from 'react'
 import './Header.css'
 
 
-export default function Header() {
-    const [score, setScore] = useState(12)
+export default function Header({score}) {
+    
 
   return (
     <div className='HeaderContainer'>
         
       <div>
-        <img src='/public/images/logo.svg' alt='Rock Paper Scissors'/>
+        <img src='images/logo.svg' alt='Rock Paper Scissors'/>
       </div>
 
       <div className="scoreContainer"> 

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import {useNavigate, useLocation} from 'react-router-dom'
 import './GameMode.css'
 
-export default function GameMode() {
+export default function GameMode({setScore, score}) {
   const [housePicknum, sethousePicknum] = useState(0);
+  const [win, setWin] = useState(false)
   const navigate = useNavigate();
   const location = useLocation();
   const id = location.state?.id;
@@ -19,6 +20,19 @@ export default function GameMode() {
 
   }, [])
 
+  const handleClick = () => {
+    navigate('/')
+  }
+
+  useEffect(() => {
+    if(id === 1 && housePicknum === 3 || id === 2 && housePicknum === 1 || id === 3 && housePicknum === 2) {
+      setWin(true)
+      setScore(score + 1)
+    } 
+    else if (id === 3 && housePicknum === 1 || id === 1 && housePicknum === 2 || id === 2 && housePicknum === 3) {
+      setScore(score - 1)
+    }
+  }, [housePicknum])
 
   return (
     <div className={`GameModeContainer ${housePicknum? 'played' : ""}`}>
@@ -28,29 +42,29 @@ export default function GameMode() {
         {id === 1 ?
         <div className='GMpapercharacter'>
           <div className='GMpaper'>
-            <img src='/public/images/icon-paper.svg' alt='paper' />
+            <img src='images/icon-paper.svg' alt='paper' />
           </div>
         </div>: ''}
 
         {id === 2?
         <div className='GMscissorscharacter'>
         <div className='GMscissors'>
-          <img src='/public/images/icon-scissors.svg' alt='scissors' />
+          <img src='images/icon-scissors.svg' alt='scissors' />
         </div>
       </div> : ""}
 
         {id === 3?
         <div className='GMrockcharacter'>
         <div className='GMrock'>
-          <img src='/public/images/icon-rock.svg' alt='rock' />
+          <img src='images/icon-rock.svg' alt='rock' />
         </div>
       </div> :""}
       </div>
 
       {housePicknum?  
         <div className='gameplayed'> 
-          <h1> You {id === housePicknum? "Draw" : id === 1 && housePicknum === 3 || id === 2 && housePicknum === 1 || id === 3 && housePicknum === 2 ? "Win" : "Lose" } </h1>
-          <button> Play Again </button> 
+          <h1> You {id === housePicknum? "Draw" : win? "Win" : "Lose" } </h1>
+          <button onClick={handleClick}> Play Again </button> 
         </div> : ""}
   
       <div className='housePicked'>
@@ -60,21 +74,21 @@ export default function GameMode() {
         {housePicknum === 1 ?
         <div className='GMpapercharacter'>
           <div className='GMpaper'>
-            <img src='/public/images/icon-paper.svg' alt='paper' />
+            <img src='images/icon-paper.svg' alt='paper' />
           </div>
         </div>: ""}
 
         {housePicknum === 2?
         <div className='GMscissorscharacter'>
         <div className='GMscissors'>
-          <img src='/public/images/icon-scissors.svg' alt='scissors' />
+          <img src='images/icon-scissors.svg' alt='scissors' />
         </div>
       </div> : ""}
 
         {housePicknum === 3?
         <div className='GMrockcharacter'>
         <div className='GMrock'>
-          <img src='/public/images/icon-rock.svg' alt='rock' />
+          <img src='images/icon-rock.svg' alt='rock' />
         </div>
       </div> : ""}
         

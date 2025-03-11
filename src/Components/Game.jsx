@@ -15,24 +15,24 @@ export default function Game() {
     <div className='gameContainer'>
 			
 			<div className='triangle'>
-	      <img src='/public/images/bg-triangle.svg' alt='background' />
+	      <img src='images/bg-triangle.svg' alt='background' />
 			</div>
 
       <div className='papercharacter' onClickCapture={() => gotoGameMode(1)}>
 				<div className='paper'>
-        	<img src='/public/images/icon-paper.svg' alt='paper' />
+        	<img src='images/icon-paper.svg' alt='paper' />
 				</div>
       </div>
 
 			<div className='scissorscharacter' onClickCapture={() => gotoGameMode(2)}>
 				<div className='scissors'>
-	      	<img src='/public/images/icon-scissors.svg' alt='scissors' />
+	      	<img src='images/icon-scissors.svg' alt='scissors' />
 				</div>
 			</div>
 
 			<div className='rockcharacter' onClickCapture={() => gotoGameMode(3)}>
 				<div className='rock'>
-		      <img src='/public/images/icon-rock.svg' alt='rock' />
+		      <img src='images/icon-rock.svg' alt='rock' />
 				</div>
 			</div>
 

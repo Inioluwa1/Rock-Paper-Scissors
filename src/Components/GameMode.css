@@ -45,7 +45,6 @@
 	border-radius: 50%;
   position: static;
 	padding: 2.5rem;
-	cursor: pointer;
 }
 .GMscissors{
 	background-color: white;
@@ -59,7 +58,6 @@
 	border-radius: 50%;
   position: static;
 	padding: 2.5rem;
-	cursor: pointer;
 }
 .GMrock{
 	background-color: white;
@@ -78,7 +76,7 @@
 }
 .gameplayed h1{
   color: white;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   font-size: 4rem;
   letter-spacing: 2px;
 }
@@ -90,6 +88,10 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  color: rgb(59, 67, 99);
+}
+.gameplayed button:hover{
+  color: red;
 }
 
 .housePicked{
