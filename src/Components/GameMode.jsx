@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useNavigate, useLocation} from 'react-router-dom'
 import './GameMode.css'
 
-export default function GameMode({setScore, score}) {
+export default function GameMode({myScore, setmyScore, computerScore, setcomputerScore}) {
   const [housePicknum, sethousePicknum] = useState(0);
   const [win, setWin] = useState(false)
   const navigate = useNavigate();
@@ -27,10 +27,10 @@ export default function GameMode({setScore, score}) {
   useEffect(() => {
     if(id === 1 && housePicknum === 3 || id === 2 && housePicknum === 1 || id === 3 && housePicknum === 2) {
       setWin(true)
-      setScore(score + 1)
+      setmyScore(myScore + 1)
     } 
     else if (id === 3 && housePicknum === 1 || id === 1 && housePicknum === 2 || id === 2 && housePicknum === 3) {
-      setScore(score - 1)
+      setcomputerScore(computerScore + 1)
     }
   }, [housePicknum])
 

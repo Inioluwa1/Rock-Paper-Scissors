@@ -9,22 +9,36 @@ import './App.css'
 
 function App() {
   const [isOpen, setisOpen] = useState(false)
-  const [score, setScore] = useState(0)
+  const [myScore, setmyScore] = useState(0)
+  const [computerScore, setcomputerScore] = useState(0)
 
   return ( 
     <div className={`App ${isOpen? "blur" : ""}`}>
       <Router>
 
-        <Header score={score} />
+        <Header 
+          myScore={myScore}
+          computerScore={computerScore} />
 
         <Routes>
           <Route path='/' element={ <Game /> }/>
-          <Route path='/gamemode' element={ <GameMode score={score} setScore={setScore} />} />
+          <Route path='/gamemode' element={ <GameMode 
+                                              myScore={myScore} 
+                                              setmyScore={setmyScore} 
+                                              computerScore={computerScore} 
+                                              setcomputerScore={setcomputerScore} 
+                                          />} />
         </Routes>
 
-        {isOpen && <Modal isOpen={isOpen} setisOpen={setisOpen} />}
+        {isOpen && <Modal 
+                      isOpen={isOpen} 
+                      setisOpen={setisOpen} 
+                    />}
 
-        <Footer isOpen={isOpen} setisOpen={setisOpen} />
+        <Footer 
+          isOpen={isOpen} 
+          setisOpen={setisOpen} 
+        />
       </Router>
     </div>
   )

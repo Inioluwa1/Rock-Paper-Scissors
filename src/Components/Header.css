@@ -12,6 +12,11 @@
 .logoImage{
     width: 100%
 }
+.generalscoreContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
 .scoreContainer{
     background-color: white;
     border-radius: 10px;
@@ -19,7 +24,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 3rem;
+    padding: .5rem 2rem;
 }
 .scoreTitle{
     color: rgb(42, 70, 192);
@@ -35,13 +40,23 @@
 
 @media screen and (max-width: 470px) {
     .HeaderContainer{
-        width: 90%
+        width: 90%;
+        flex-direction: column;
     }
     .logoImage{
-        width: 80%
+        width: 80%;
+    }
+    .generalscoreContainer{
+        width: 100%;
+        /* border: 3px solid; */
+        margin-top: 1rem;
     }
     .scoreContainer{
-        padding: .5rem 1.5rem;
+        padding: .5rem 1rem;
+        width: 40%
+    }
+    .scoreTitle{
+        text-align: center;
     }
     .scoreValue{
         font-size: 3rem;
